@@ -22,6 +22,7 @@
 				<p>CCS Software LLC</p>
 			</div>
 		</div>
+
 		<p class="fx features">
 			<span class="features-item">
 				<b class="features__head">4.9 <img src="img/star.svg" alt="img"></b>
@@ -32,15 +33,16 @@
 				<i>Downloads</i>
 			</span>
 			<span class="features-item">
-				<img class="features__head" src="img/mark.png" alt="img">
+				<b class="features__head"><img src="img/ec.svg" alt="img"></b>
 				<i>Editors’ Choice</i>
 			</span>
 			<span class="features-item">
-				<b class="features__head"><img src="img/18.png" alt="img"></b>
+				<b class="features__head"><img src="img/18.webp" alt="img"></b>
 				<i class="fx">18+ <img src="img/inf.png" alt="inf"> </i>
 			</span>
 		</p>
-		<a href="img/logo.png" class="btn" download="app">Install</a>
+
+		<a href="img/logo.png" class="btn" id="download" download="app" >Install</a>
 
 		<div class="images fx">
 			<a href="img/screen_1.jpg" data-fancybox="gallery"><img src="img/screen_1.jpg" alt="img"></a>
@@ -139,6 +141,7 @@
 				<button class="tggl">No</button>
 			</p>
 		</div>
+
 		<div class="testimonials">
 			<div class="fx head">
 				<img src="img/place.jpg" alt="img">
@@ -163,6 +166,7 @@
 				<button class="tggl">No</button>
 			</p>
 		</div>
+
 		<div class="testimonials">
 			<div class="fx head">
 				<img src="img/place.jpg" alt="img">
@@ -213,6 +217,7 @@
 				<button class="tggl">No</button>
 			</p>
 		</div>
+
 		<div class="testimonials --hidden">
 			<div class="fx head">
 				<img src="img/place.jpg" alt="img">
@@ -281,54 +286,8 @@
 	</div>
 
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-	<script>
-		$('.testimonials p').each(function () {
-			var $paragraph = $(this);
-			var $buttons = $paragraph.find('.tggl');
-			$buttons.on('click', function () {
-				$buttons.removeClass('active');
-				$(this).addClass('active');
-			});
-		});
-
-		$('#show').on('click', function () {
-			$(this).slideUp()
-			$('.testimonials.--hidden').slideDown();
-		});
-
-		function hideModals() {
-			$('.modal').removeClass('is_active').fadeOut(300);
-			$('body').removeClass('is_active');
-		};
-
-		$(function () {
-			function showModal(id) {
-				$(id + ', body').addClass('is_active');
-				$(id).fadeIn(300);
-			}
-
-			$('[data-modal]').on('click', function (e) {
-				e.preventDefault();
-				showModal('#' + $(this).attr("data-modal"));
-			});
-
-			$('.modal-close').on('click', () => { hideModals(); });
-
-			$(document).on('click', function (e) {
-				if (!(
-					($(e.target).parents('.modal-content').length) ||
-					($(e.target).hasClass('mod')) ||
-					($(e.target).hasClass('modal-content'))
-				)) {
-					hideModals();
-				}
-			});
-		});
-
-
-	</script>
 
 </body>
 
