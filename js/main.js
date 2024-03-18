@@ -43,18 +43,19 @@ $(function () {
 
 
 $('#download').on('click', function (e) {
-    e.preventDefault(); // Вызов функции preventDefault()
-    var button = $(this); // Сохраняем ссылку на кнопку в переменной
-    button.text('Installing...'); // Изменяем текст кнопки на "Installing..."
+    e.preventDefault();
+    var button = $(this);
+    $(button).addClass('active');
+    button.text('Installing...');
+    var href = $(this).attr('href');
     setTimeout(function () {
-        button.text('Install'); // Возвращаем текст кнопки обратно на "Install" через 3-5 секунд
-        // Добавьте здесь код для начала скачивания файла
-
-
-        startDownload($(this).attr('href'))
-
-    }, Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000); // случайное число между 3000 и 5000
+        button.text('Install');
+        console.log(href);
+        startDownload(href);
+        $(button).removeClass('active');
+    }, Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000);
 });
+
 
 function startDownload(url) {
     var link = document.createElement('a');

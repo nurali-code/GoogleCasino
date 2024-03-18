@@ -15,7 +15,7 @@ body
     padding: 30px
     background-color: #fff
     font-family: 'Google Sans', sans-serif
-    &.is_active 
+    &.is_active
         overflow: hidden
 
 img
@@ -70,6 +70,12 @@ i
         font-size: 14px
         color: rgba(0, 85, 42, .8)
 
+    &.active
+        pointer-events: none
+        background-color: rgba(#01875F, .5)
+
+        // opacity: .5
+
 .tag
     display: inline-block
     vertical-align: middle
@@ -100,5 +106,5 @@ i
     height: 35px
     background-repeat: no-repeat
     background-position: center center
-    background-size: 55% auto 
+    background-size: 55% auto
     background-image: url('../img/arrow.svg')
