@@ -1,0 +1,104 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$black: rgba(27, 27, 27, 1)
+
+body
+    min-height: 100vh
+    color: rgba(27, 27, 27, .5)
+    font-size: 12px
+    font-weight: 400
+    padding: 30px
+    background-color: #fff
+    font-family: 'Google Sans', sans-serif
+    &.is_active 
+        overflow: hidden
+
+img
+    max-width: 100%
+
+b, strong, .h1, .h2, .h3
+    color: $black
+    font-weight: normal
+
+.h2
+    font-weight: 400
+    font-size: 15px
+    line-height: 19.08px
+    margin: 0 0 10px
+
+section
+    padding: 15px 0
+
+ol, ul
+    list-style: none
+a,
+button
+    color: #000
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+.fx
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+i
+    font-style: normal
+
+.btn
+    margin: 0
+    padding: 0px 16px
+    background-color: #01875F
+    color: #fff
+    display: block
+    width: 100%
+    text-align: center
+    padding: 9px
+    font-size: 12px
+    border-radius: 7px
+    &__link
+        display: inline-block
+        padding: 2px 0
+        font-size: 14px
+        color: rgba(0, 85, 42, .8)
+
+.tag
+    display: inline-block
+    vertical-align: middle
+    padding: 7px 15px 8px
+    border-radius: 30px
+    border: 0.5px solid rgba(0, 0, 0, .2)
+    margin: 0 7px 0 0
+    text-align: center
+    color: $black
+    &-wrap
+        padding: 15px 0 10px
+
+.tggl
+    font-size: 10px
+    min-width: 42px
+    margin: 0 0 0 8px
+    padding: 4px
+    border: 0.5px solid rgba(0, 0, 0, .2)
+    border-radius: 30px
+    transition: all ease .3s
+    &.active
+        color: rgba(0, 85, 42, 1)
+        background-color: rgba(0, 85, 42, .1)
+        border-color: rgba(0, 85, 42, .05)
+
+.mod
+    width: 35px
+    height: 35px
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 55% auto 
+    background-image: url('../img/arrow.svg')

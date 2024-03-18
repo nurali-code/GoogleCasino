@@ -1,0 +1,173 @@
+/* Slider */
+
+.slick
+    &-slider
+        position: relative
+        display: block
+        box-sizing: border-box
+        -webkit-touch-callout: none
+        user-select: none
+        touch-action: pan-y
+        -webkit-tap-highlight-color: transparent
+        &::after
+            content: ''
+            display: block
+            width: calc( 100% - 220px )
+            bottom: 30px
+            height: 1px
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            background-color: #000000
+
+    &-list
+        position: relative
+        overflow: hidden
+        display: block
+        margin: 0
+        padding: 0
+
+        &:focus
+            outline: none
+        &.dragging
+            cursor: pointer
+            cursor: hand
+
+    &-slider
+        width: 100%
+        position: relative
+        left: 0
+        padding-bottom: 93px
+        .slick-track,
+        .slick-list
+            -webkit-transform: translate3d(0, 0, 0)
+            -moz-transform: translate3d(0, 0, 0)
+            -ms-transform: translate3d(0, 0, 0)
+            -o-transform: translate3d(0, 0, 0)
+            transform: translate3d(0, 0, 0)
+
+    &-track
+        position: relative
+        left: 0
+        top: 0
+        display: block
+        margin-left: auto
+        margin-right: auto
+
+        &:before,
+        &:after
+            content: ""
+            display: table
+
+        &:after
+            clear: both
+
+        .slick-loading &
+            visibility: hidden
+
+    &-slide
+        float: left
+        height: 100%
+        margin: 0
+        min-height: 1px
+        transition: all ease .3s
+        // [dir="rtl"] &
+        //     float: right
+
+        img
+            display: block
+
+        &.slick-loading img
+            display: none
+
+            display: none
+
+        &.dragging img
+            pointer-events: none
+
+        .slick-initialized &
+            display: block
+
+        .slick-loading &
+            visibility: hidden
+
+        .slick-vertical &
+            display: block
+            height: auto
+            border: 1px solid transparent
+
+    &-arrow.slick-hidden
+        display: none
+
+    &-arrow
+        width: 60px
+        height: 60px
+        font-size: 0
+        color: transparent
+        position: absolute
+        z-index: 100
+        bottom: 0
+        border: none
+        background-color: #D9D9D9
+        background-image: url('../img/slick-arrow.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 50% auto
+        border-radius: 5px
+
+        &::before
+            display: none
+
+    &-prev
+        left: 30px
+        transform: scale(-1) !important
+        left: 0
+
+    &-next
+        right: 0
+
+    &-dots
+        display: flex
+        align-items: center
+        justify-content: center
+        list-style: none
+        padding-top: 17px
+        li
+            padding: 6px
+            font-size: 0
+
+        button
+            width: 12px
+            border-radius: 50%
+            font-size: 0
+            height: 12px
+            margin: 0
+            background-color: #717171
+            background-color: rgba(white, .2)
+
+        .slick-active
+            button
+                background-color: rgba(white, 1)
+
+    &-disabled
+        cursor: no-drop
+        pointer-events: none
+        opacity: .5
+
+    @media screen and ( max-width: 1100px )
+        &-slider 
+            padding-bottom: 60px
+            &::after
+                width: calc( 100% - 146px )
+                bottom: 20px
+
+        &-list
+            padding: 0 15px
+
+        &-arrow 
+            width: 40px 
+            height: 40px
+            margin: 0 15px
+
+    
+            

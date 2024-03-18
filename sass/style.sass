@@ -1,0 +1,87 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.box
+    padding: 13px 20px 20px 50px
+    border: 0.5px solid rgba(0, 0, 0, .2)
+    border-radius: 8px
+    margin: 20px 0 0
+    img
+        position: absolute
+        max-width: 18px
+        left: -32px
+        top: 50%
+        transform: translateY(-50%)
+
+    li
+        position: relative
+        z-index: 1
+        margin: 0 0 16px
+        &:last-child
+            margin-bottom: 0
+
+    span
+        display: block
+        margin: 0 0 3px
+        line-height: 13.99px
+        font-size: 11px
+
+    i
+        display: block
+        font-size: 9px
+        line-height: 11.45px
+
+.review
+    align-items: stretch
+    margin-bottom: 18px
+    max-width: 500px
+    &-fs
+        width: 100px
+        text-align: center
+
+    &-rage
+        width: 100%
+        position: relative
+        z-index: 1
+        font-size: 13px
+        line-height: 11px
+        span,
+        &::before
+            position: absolute
+            left: 20px
+            background-color: #01875F
+            height: 100%
+            max-width: calc( 100% - 20px )
+            border-radius: 5px
+
+        &::before
+            width: 100%
+            content: ''
+            background-color: #efeff4
+
+    .col
+        padding-top: 17px
+        flex-direction: column
+        width: calc( 100% - 120px )
+
+    .heading
+        font-size: 70px
+        color: $black
+        font-weight: 400
+
+.testimonials
+    padding: 25px 0 15px
+    .head 
+        justify-content: flex-start
+        gap: 11px
+        margin-bottom: 10px
+        img 
+            width: 35px
+            height: 35px
+            border-radius: 50%
+
+    &.--hidden
+        display: none
+
+@import 'modal'
